@@ -1,21 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package split_vertex;
 
-/**
- *
- * @author pawel
- */
+import java.util.List;
+
 public class Split_vertex {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        SplitVertex split_vertex = new SplitVertex();
+        split_vertex.readData(System.in);
+        split_vertex.calculate();
+        System.out.print("size split_vertex: ");
+        System.out.print(split_vertex.size_split_vertex());
+        List<Integer> list = split_vertex.get_split_vertex();
+        System.out.print("\nsplit vertex: ");
+        
+        list.forEach((vertex)->{
+            System.out.print(vertex);
+            System.out.print(", ");
+        });
+        System.out.print("\b\b \n");
     }
     
 }
